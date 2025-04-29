@@ -1,5 +1,7 @@
+
 import React, { useState } from "react";
 import axios from "axios";
+import "./App.css";
 
 function App() {
   const [file, setFile]     = useState(null);
@@ -29,7 +31,8 @@ function App() {
 
   return (
     <div style={{ padding: 20 }}>
-      <h1>Hybrid IDS Demo</h1>
+     <h1 className="hacker-heading">AI Intrusion Detection System</h1>
+
 
       <input
         type="file"
