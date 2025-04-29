@@ -4,6 +4,13 @@ import pandas as pd
 import json
 import joblib
 import tensorflow as tf
+from flask_pymongo import PyMongo
+from datetime import datetime
+
+
+app = Flask(__name__)
+app.config["MONGO_URI"] = "mongodb+srv://<db_username>:<db_password>@cluster0.wmklojz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+mongo = PyMongo(app)
 
 class_name={0:'BENIGN',7: 'FTP-Patator',11: 'SSH-Patator',1: 'Bot',10: 'PortScan'
  ,12:'Web Attack � Brute Force',14: 'Web Attack � XSS',13:
